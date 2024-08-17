@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+
+    <style>
+        div#area{
+            font: normal 20pt Arial;
+            background: rgb(42, 139, 42);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="area"> 
+        Interaja...
+    </div>
+<!-- Dessa outra forma você faz os eventos pelo JavaScript, não poluindo assim o seu html-->
+
+    <script>
+        var a = document.getElementById('area')/* Aqui você chama o ID da div que você quer colocar os eventos e atribui uma variavel pra ele*/
+        a.addEventListener('click', clicar)/* Essa é a forma de chamar o evento em JavaScript, nesse caso é o do mouse clicar na div*/
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar(){/* Dessa forma cria uma função clicar, assim ele dispara quando a div for clicada*/
+            a.innerText = 'Clicou!'
+            a.style.background = 'red'
+        }
+
+        
+        function entrar(){
+            a.innerText = 'Entrou!'
+        }
+
+        
+        function sair(){
+            a.innerText = 'Saiu!'
+            a.style.background = 'green'
+        }
+    </script>
+</body>
+</html>
