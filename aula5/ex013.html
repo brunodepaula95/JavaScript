@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+
+    <h1>Qual a sua nacionalidade?</h1>
+    Em qual país você nasceu?  <input type="text" name="txtnsc" id="txtnsc"></br>
+    <input type="button" value="Consultar" onclick="consultar()">
+    <div id="resultado"></div>
+
+    <script>
+        function consultar(){
+            var txtcon = document.getElementById('txtnsc')
+            var resultado = document.getElementById('resultado')
+            var res = txtcon.value
+            if(res == 'Brasil'){
+                resultado.innerHTML += `<p> Você é Brasileiro</p>`
+            }else{
+                resultado.innerHTML += `<p> Você é Estrangeiro</p>`
+            }
+        }
+    </script>
+    
+</body>
+</html>
