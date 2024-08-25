@@ -3,26 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analisar numeros</title>
+    <title>Analisador de Números</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Aa</h1>
+        <h1>Analisador de Números</h1>
     </header>
     <section>
         <div >
-            <p>Número:
+            <p>Número(entre 1 e 100):
                 <input type="Number" name="numero" id="num" >
             </p>
             <p>
-                <input type="button" value="Gerar Tabuada" onclick="gerar()">
+                <input type="button" value="Adicionar" onclick="adicionar()">
             </p>
-        </div>
-        <div>
-            <select name="tabuada" id="seltab" size="10">
+            <select name="flista" id="flista" size="6">
                 <option> Digite um numero acima</option>
+
             </select>
+            <br><input type="button" value="Finalizar" onclick="finalizar()">
+        </div>
+        <div id="res">
+            
         </div>
 
     </section>
