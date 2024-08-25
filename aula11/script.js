@@ -1,10 +1,32 @@
-function contar(){ //cria a função iniciada no botar contar
-    var ini = document.getElementById('txti') 
-    var fim = document.getElementById('txtf')
-    var passo = document.getElementById('txtp')
-    var res = document.getElementById('res') // cria variaveis baseadas nos ids colocadas no html
+function gerar(){ //cria a função iniciada no botar contar
+    var nu = document.getElementById('num')
+    var tab = document.getElementById('seltab') // cria variaveis baseadas nos ids colocadas no html
 
-    if( ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0){ //confere o tamanho da variavel comparado a zero
+    if (nu.value.length == 0){//pergunta se o numero está vazio faça o alert abaixo
+        window.alert('Por favor, digite um número')
+    } else {
+        var n = Number(nu.value)//convertendo em numero
+        var c = 1//criando a base da tabuada
+        tab.innerHTML = '' // antes de mostrar a tabuada ele limpa a tela colocando nada na tela
+        while(c <= 10) {
+            var item = document.createElement('option')//cria o elemento option, pq dentro de um select tem que ter opções
+            item.text = `${n} x ${c} = ${n*c}`//essa é a parte de dentro do option, com as concatenações e p calculo
+            item.value = `tab${c}` // para javascript não faz diferença, mas para outras linguagens ele mostra qual item foi selecionado
+            tab.appendChild(item)
+            c++
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /*if( ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0){ //confere o tamanho da variavel comparado a zero
         window.alert('ERRO FALTAM DADOS!')//verificando se o usuario não deixou tudo zerado
     } else {
         res.innerHTML = 'Contando: '
@@ -25,10 +47,10 @@ function contar(){ //cria a função iniciada no botar contar
                 res.innerHTML += `${c} \u{1F449}`//codigo só funciona com crase para inserir emojis
             }
          }
-        res.innerHTML += `\u{1F3C1}`
+        
     }
    
     
-
+*/
     
 }
