@@ -30,7 +30,7 @@ document.getElementById("mySubmit").onclick = function(){
 
 //Math = built-in object that provides a collection of properties and methods
 
-let x = 3.21;
+/*let x = 3.21;
 let y = 2;
 let z;
 
@@ -45,8 +45,13 @@ z = Math.cos(x);//enconta o cosseno
 z = Math.abs(x);//te da o valor absoluto mas positivo
 let max = Math.max(x, y, z); //encontra o valor maximo dentre os 3
 let min = Math.min(x, y, z); //encontra o valor minimo dentre os 3
+*/
 
+//Random number generator
 
+/*let randomNum = Math.floor(Math.random() * 100) + 1;
+console.log(randomNum);
+*/
 
 
 
