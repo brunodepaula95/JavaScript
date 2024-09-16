@@ -23,10 +23,11 @@ function removerTarefa(indice){
 
 
 //função para listar todas as tarefas
-
-function listarTarefas(){
+//usar um forEach é melhor e mais elegante de iterar sobre arrays, principalmente quando você não precisa interromper a iteração
+function listarTarefas() {
   console.log('Tarefas do dia:');
-  for(let i = 0; i < tarefas.length; i++){
-    console.log(`${i + 1}. ${tarefas[i]}`);
-  }
-  }
+  tarefas.forEach((tarefa, indice) => {
+      console.log(`${indice + 1}. ${tarefa}`);
+  });
+}
+  
